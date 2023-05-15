@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreOpinionRequest;
 use App\Models\Free;
 use App\Services\OpinionService;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Cache;
 
 class FormOpinionController extends Controller
 {
@@ -17,17 +15,10 @@ class FormOpinionController extends Controller
 
     public function index()
     {
-        if (Cache::has('freebies')) {
-            $freebies = Cache::get('freebies');
-        } else {
-            $freebies = Free::all();
-            Cache::put('freebies', $freebies, now()->addDay(365));
-        }
-
         return view(
             'form/opinion/index',
             [
-                'freebies' => $freebies,
+                'freebies' => Free::getAllCached(),
             ]
         );
     }
