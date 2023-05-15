@@ -1,0 +1,40 @@
+// Fonts
+//@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+@import 'jquery-ui/themes/base/all.css';
+
+@import "styles/font";
+@import "styles/variables";
+@import "styles/root";
+@import "styles/button";
+
+@import "styles/animate";
+
+@import "styles/header";
+@import "styles/footer";
+
+@import "styles/home/home-top";
+@import "styles/home/home-steps";
+@import "styles/home/home-awards";
+@import "styles/home/home-promo";
+@import "styles/home/home-contact";
+@import "styles/home/home-baner";
+
+@import "styles/home/section-products";
+
+@import "styles/form/form";
+@import "styles/form/form-app";
+@import "styles/form/form-opinion";
+
+@import "styles/thx/thx-app";
+@import "styles/thx/thx-opinion";
+
+@import "styles/error/error-info";
+
+@import "styles/modal/modal";
+@import "styles/logos";

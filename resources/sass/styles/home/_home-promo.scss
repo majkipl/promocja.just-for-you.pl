@@ -1,0 +1,58 @@
+.home-promo {
+    position: relative;
+    background-color: $gray;
+
+    .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-size: auto;
+
+        @media #{$min-sm} {
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-size: auto 30%;
+        }
+
+        @media #{$min-md} {
+            background-size: auto 40%;
+        }
+
+        @media #{$min-lg} {
+            background-size: auto 65%;
+        }
+
+        @media #{$min-xl} {
+            background-size: auto;
+        }
+    }
+
+    .button {
+        margin-top: 30px;
+        margin-bottom: 45px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.webp {
+    .home-promo {
+        .container {
+            @media #{$min-sm} {
+                background-image: url(/images/home/promo.png.webp);
+            }
+        }
+    }
+}
+
+.no-webp {
+    .home-promo {
+        .container {
+            @media #{$min-sm} {
+                background-image: url(/static/pl/img/home/promo.png);
+            }
+        }
+    }
+}

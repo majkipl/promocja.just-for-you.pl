@@ -1,0 +1,53 @@
+.logos {
+    > div {
+        /*margin-bottom: 30px;*/
+    }
+
+    .logo {
+        background-color: $white;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 160px;
+        display: block;
+        position: relative;
+
+        &[href*="mediamarkt.pl"] {
+            background-position: center 0px;
+        }
+
+        &[href*="mediaexpert.pl"] {
+            background-position: center -160px;
+        }
+
+        &[href*="euro.com.pl"] {
+            background-position: center -320px;
+        }
+
+        &[href*="neonet.pl"] {
+            background-position: center -480px;
+        }
+
+        &[href*="mycenter.pl"] {
+            background-position: center -640px;
+        }
+
+        &[href*="al.to"] {
+            background-position: center -800px;
+        }
+    }
+}
+.webp {
+    .logos {
+        .logo {
+            background-image: url(/images/modal/logos.png.webp);
+        }
+    }
+}
+
+.no-webp {
+    .logos {
+        .logo {
+            background-image: url(/images/modal/logos.png);
+        }
+    }
+}

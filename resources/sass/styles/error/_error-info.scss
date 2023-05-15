@@ -1,0 +1,50 @@
+.error-info {
+    padding: 100px 0;
+    background-color: $black;
+    color: $white;
+
+    .container {
+        min-height: calc(100vh - 120px - 37vh);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        color: $red;
+        font-size: 120px;
+
+        @media #{$min-sm} {
+            font-size: 140px;
+        }
+
+        @media #{$min-md} {
+            font-size: 160px;
+        }
+
+        @media #{$min-lg} {
+            font-size: 180px;
+        }
+
+        @media #{$min-xl} {
+            font-size: 200px;
+        }
+    }
+
+    h2 {
+        @media #{$min-sm} {
+        }
+    }
+
+    .info {
+        margin-bottom: 0;
+        color: $gray;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .link {
+        color: $white;
+    }
+}

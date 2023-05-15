@@ -1,0 +1,133 @@
+body {
+    font-family: $font-regular;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: $primary;
+    color: $black;
+    margin-top: 80px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: attr(width) / attr(height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+h1,
+h2 {
+    font-size: 24px;
+
+    @media #{$min-sm} {
+        font-size: 36px;
+    }
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.bold {
+    font-family: $font-bold;
+}
+
+.regular {
+    font-family: $font-regular;
+}
+
+.text-red {
+    color: $red;
+}
+
+.text-gray {
+    color: $gray;
+}
+
+.link {
+    color: $link;
+    text-decoration: underline;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $link-hover;
+    }
+
+    &:focus-visible {
+        color: $link-hover;
+    }
+}
+
+
+
+
+
+
+
+/*
+.input::-webkit-input-placeholder {
+    color: $white;
+    opacity: 1;
+}
+.input:-ms-input-placeholder {
+    color: $white;
+    opacity: 1;
+}
+.input::-ms-input-placeholder {
+    color: $white;
+    opacity: 1;
+}
+.input::placeholder {
+    color: $white;
+    opacity: 1;
+}
+*/
+
+
+
+
+
+//.status-img-ean,
+//.status-img-receipt {
+//    color: green;
+//    position: relative;
+//    text-align: center;
+//    font-size: 14px;
+//    line-height: 1;
+//    margin-top: 5px;
+//}
+
+/*
+.error-post {
+    display: none;
+}
+*/
+
+
+
+.focus-visible-not-supported {
+    .field {
+        padding-top: 30px;
+    }
+
+    .placeholder {
+        top: 0;
+    }
+}

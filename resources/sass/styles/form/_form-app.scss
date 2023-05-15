@@ -1,0 +1,31 @@
+.form-app-top {
+    position: relative;
+    background-color: $gray;
+}
+
+.form-app-content {
+    position: relative;
+
+    .container {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+.form-app-form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .button {
+        min-height: 82px;
+    }
+
+    .uploads-d-none {
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

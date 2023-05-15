@@ -1,0 +1,187 @@
+.form {
+    .field {
+        position: relative;
+
+        .input,
+        .textarea {
+            border: 1px solid $grayless;
+            line-height: 22px;
+            width: 100%;
+            background: none;
+            border-radius: 0;
+            padding-left: 15px;
+            transition: all 0.3s ease;
+
+            &:focus {
+                outline: none;
+                border: 3px solid $black;
+            }
+
+            &.invalid {
+                border: 3px solid $red;
+            }
+
+            &:not(.select):focus-visible,
+            &.valid,
+            &.select:not(.empty) {
+                + .placeholder {
+                    color: $black;
+                    transform: scale(0.8) translateY(-30px);
+                    width: auto;
+                    background-color: rgba(255, 255, 255, 1);
+                }
+            }
+
+            &::placeholder {
+                color: transparentize($white, 0.6);
+            }
+
+            &.select {
+                appearance: none;
+                background: no-repeat right 23px center / auto;
+                background-image: url(/images/svg/form/arrow.svg),
+                linear-gradient(
+                        90deg,
+                        $transparent calc(100% - 34px),
+                        $dark calc(100% - 34px),
+                        $dark calc(100% - 33px),
+                        $transparent calc(100% - 33px)
+                );
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-align: left;
+                text-align-last: left;
+                padding: 0 15px;
+
+                > option {
+                    color: $black;
+                    padding-left: 15px;
+                }
+
+                + .placeholder {
+                    max-width: calc(100% - 116px);
+                }
+            }
+        }
+
+        .input {
+            height: 50px;
+        }
+
+        .textarea {
+            resize: none;
+            min-height: 150px;
+            padding-top: 10px;
+        }
+
+        .label-checkbox {
+            min-height: 33px;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            position: relative;
+            padding-left: 60px;
+            padding-top: 12px;
+            font-size: 13px;
+
+            a {
+                color: inherit;
+                text-decoration: underline;
+            }
+
+            &:before {
+                content: "";
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all 0.3s ease;
+                border: 1px solid $dark;
+                border-radius: 0;
+            }
+
+            &.invalid {
+                &:before {
+                    border-color: $red;
+                    border-width: 3px;
+                }
+            }
+        }
+
+        .checkbox {
+            &:focus + .label-checkbox:before {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            position: absolute;
+            z-index: -1000;
+            left: -1000px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            width: 1px;
+            border: 0;
+
+            &:checked + .label-checkbox {
+                &:before {
+                    background-color: transparent;
+                }
+
+                &:after {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    background-image: url(/images/svg/form/accept.svg);
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    background-position: center center;
+                }
+            }
+        }
+
+        .placeholder {
+            position: absolute;
+            top: 13px;
+            left: 30px;
+            background-color: rgba(255, 255, 255, 0);
+            max-width: calc(100% - 30px);
+            padding: 0 5px;
+            color: $grayless;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            transition: transform 0.25s;
+            transform-origin: 0 0;
+            pointer-events: none;
+            width: calc(100% - 60px);
+            opacity: 1;
+        }
+
+        .error {
+            color: $red;
+            position: relative;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 14px;
+            line-height: 1;
+            margin-top: 5px;
+
+            &:not(:empty)::before {
+                background-image: url(/images/svg/form/error.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 12px;
+                height: 12px;
+                display: inline-block;
+                content: "";
+                margin-right: 5px;
+                transform: translateY(2px);
+            }
+        }
+    }
+}

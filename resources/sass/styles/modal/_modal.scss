@@ -1,0 +1,80 @@
+.modal {
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .modal-content {
+        border: none;
+        border-radius: 23px;
+        color: $black;
+    }
+
+    .modal-header {
+        padding: 0;
+        border: none;
+
+        .modal-title {
+            padding: 30px 30px 0px 30px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            text-transform: none;
+            width: 100%;
+        }
+
+        .modal-toggler {
+            background-color: $white;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: $black;
+                width: 18px;
+                height: 2px;
+                transition: transform 0.25s;
+            }
+
+            &::before {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &:hover,
+            &:focus-visible {
+                background-color: $red;
+
+                &::before,
+                &::after {
+                    background-color: $white;
+                }
+
+                &::before {
+                    transform: translate(-50%, -50%) rotate(135deg);
+                }
+
+                &::after {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 30px;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

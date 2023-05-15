@@ -1,0 +1,32 @@
+$font-regular: Helvetica LT W02 Roman;
+$font-bold: Helvetica LT W02 Bold;
+
+$transparent: transparent;
+$white: #ffffff;
+$black: #1d1d1d;
+$red: #e52713;
+$gray: #f2f2f2;
+$dark: #b5b5b5;
+$grayless: #b3b3b3;
+$placeholder: #eeeeee;
+
+$link: #1d1d1d;
+$link-hover: #1d1d1d;
+
+/*$shadow: rgba(0, 0, 0, 0.66);*/
+/*$primary: #ffffff;*/
+/*$primary: #707070;*/
+
+/*$bg-color: #ffffff;*/
+/*$primary: #1d2024;*/
+
+$primary: $white;
+$secondary: $gray;
+
+$primary-url: "%23030D3E";
+
+$min-sm: "(min-width: 576px)";
+$min-md: "(min-width: 768px)";
+$min-lg: "(min-width: 992px)";
+$min-xl: "(min-width: 1200px)";
+$min-fhd: "(min-width: 1920px)";
