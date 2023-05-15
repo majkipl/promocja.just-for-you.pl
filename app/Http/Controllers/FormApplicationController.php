@@ -23,51 +23,14 @@ class FormApplicationController extends Controller
 
     public function index()
     {
-        if (Cache::has('voivodeships')) {
-            $voivodeships = Cache::get('voivodeships');
-        } else {
-            $voivodeships = Voivodeship::all();
-            Cache::put('voivodeships', $voivodeships, now()->addDay(365));
-        }
-
-        if (Cache::has('products')) {
-            $products = Cache::get('products');
-        } else {
-            $products = Product::all();
-            Cache::put('products', $products, now()->addDay(365));
-        }
-
-        if (Cache::has('shops')) {
-            $shops = Cache::get('shops');
-        } else {
-            $shops = Shop::all();
-            Cache::put('shops', $shops, now()->addDay(365));
-        }
-
-        if (Cache::has('freebies')) {
-            $freebies = Cache::get('freebies');
-        } else {
-            $freebies = Free::all();
-            Cache::put('freebies', $freebies, now()->addDay(365));
-        }
-
-        if (Cache::has('wheres')) {
-            $wheres = Cache::get('wheres');
-        } else {
-            $wheres = Where::all();
-            Cache::put('wheres', $wheres, now()->addDay(365));
-        }
-
-        // TODO: ROZWAŻYĆ PRZENIESIENIE CACHOWANIA DO MODELU
-
         return view(
             'form/application/index',
             [
-                'voivodeships' => $voivodeships,
-                'products' => $products,
-                'shops' => $shops,
-                'freebies' => $freebies,
-                'wheres' => $wheres
+                'voivodeships' => Voivodeship::getAllCached(),
+                'products' => Product::getAllCached(),
+                'shops' => Shop::getAllCached(),
+                'freebies' => Free::getAllCached(),
+                'wheres' => Where::getAllCached()
             ]
         );
     }

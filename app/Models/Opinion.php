@@ -10,7 +10,10 @@ class Opinion extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'firstname','lastname','email','application_id','url','content','legal_1','legal_2','legal_3','legal_4','free_id'];
+    protected $fillable = [
+        'id', 'firstname','lastname','email','application_id','url',
+        'content','legal_1','legal_2','legal_3','legal_4','free_id'
+    ];
 
     /**
      * @return BelongsTo
